@@ -2,11 +2,17 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+$background-color: #1d1d1d; /* a dark, off-black for the bg */
+$text-color: rgb(231, 229, 229); /* an off-white for the text #e6e6e6 */
+$grey-color-light: #565656; /* for the border-top separators */
+$grey-color-dark: #8d8d8c; /* such as the site title in the header, visited */
+
+
 @import "{{ site.theme }}";
 
 .post img {
         display: block;
-        // border:1px solid #021a40;
+        border:1px solid #021a40;
         vertical-align: top;
         margin-left: auto;
         margin-right: auto;
@@ -28,7 +34,7 @@
 [class^="language-"]:not(.language-plaintext) pre,
 [class^="language-"]:not(.language-plaintext) code
 {
-  background-color: #323443 !important;
+  background-color: #222641 !important;
 }
 
 .language-python + .language-plaintext code { background-color: white !important; }
@@ -41,7 +47,7 @@
         margin-top:1.5rem !important;
         padding-bottom:0 !important;
         padding-top:0 !important;
-        background: #323443 !important;
+        background: #0d0d0e !important;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
         font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace;
@@ -53,8 +59,10 @@
         padding-bottom:0 !important;
         padding-top:0 !important;
 }
+
+
 .input_area pre {
-        border-left: 1px solid lightcoral;
+        // border-left: 1px solid rgb(232, 240, 128);
 }
 .output_area pre {
         border-left: 1px solid grey;
@@ -72,7 +80,7 @@
 // make non-headings slightly lighter
 .post-content p, .post-content li {
    font-size: 20px;
-   color: #515151;
+   color: rgb(190, 189, 189);
 }
 
 // change padding of headings
@@ -122,9 +130,9 @@ li {
  $dt-gray-light: #f8f8f2; // Foreground
  $dt-blue: #6272a4;       // Comment
  $dt-cyan: #8be9fd;
- $dt-green: #50fa7b;
- $dt-orange: #ffb86c;
- $dt-pink: #ff79c6;
+ $dt-green: #0c862b; //#50fa7b;
+ $dt-orange: #aa7d4d;
+ $dt-pink: #daa024;  //#ff79c6;
  $dt-purple: #bd93f9;
  $dt-red: #ff5555;
  $dt-yellow: #f1fa8c;
@@ -135,8 +143,8 @@ li {
   */
  
  .highlight {
-//    background: $dt-gray-dark;
-//    color: $dt-gray-light;
+  background: $dt-gray-dark;
+  color: $dt-gray-light;
  
    .hll,
    .s,
@@ -243,7 +251,7 @@ li {
    .nc,
    .nf
     {
-     color: $dt-green-light;
+     color: $dt-green;
    }
  
    .k,
@@ -321,7 +329,7 @@ h6:hover .anchor-link {
 }
 
 .page-description {
-  color: #585858;
+  color: rgb(197, 197, 186);
   font-size: 110%;
 }
 
@@ -342,7 +350,7 @@ h6:hover .anchor-link {
   opacity: 35%;
 }
 .category-tags-link {
-  color:rgb(187, 129, 129) !important;
+  color:rgb(233, 229, 10) !important;
   font-size: 13px !important;
 }
 
@@ -354,3 +362,68 @@ h6:hover .anchor-link {
 .lunrsearchresult a {display: block; color: #777;}
 .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
 .lunrsearchresult a:hover .title {text-decoration: underline;}
+
+
+// the stuff below is added by AK
+
+.output_subarea pre, .output_subarea div {
+  background: #323443 !important;
+}
+
+.post-content, .page-content a:link{
+  color: #dfa81294 !important;
+  text-shadow: None;
+  font-family: 'Buda', cursive;
+  // text-align: center;
+  // z-index: 0;
+  // position: relative;
+}
+
+
+.post-content, .page-content a:visited{
+  color: #967f41fb !important;
+  font-family: 'Buda', cursive;
+}
+
+.post-content, .page-content a:hover{
+  color: #dfa81294 !important;
+  text-shadow: 0 0 12px rgba(230,160,55,0.6);
+  font-family: 'Buda', cursive;
+  font-weight: 100;
+  text-decoration: None;
+}
+
+
+.post-content, .page-content a:active{
+  color: #cc6c1dfb !important;
+  font-family: 'Buda', cursive;
+}
+
+
+.post-content, .page-content a:active{
+  color: #cc6c1dfb !important;
+  font-family: 'Buda', cursive;
+}
+
+.language-plaintext.highlighter-rouge{
+  color: #e6d818fd !important;
+  background: #181717fb !important;
+  font-family: 'Buda', cursive;
+}
+
+.post-content h1, h2, h3, h4, h5, h6{
+  // color: #5a5754fb !important;
+  // font-family: 'Buda', cursive;
+  color: $text-color;
+  background: $background-color;
+  // font-size: 15px;
+  margin-bottom:.05rem !important;
+}
+
+.text_cell_render.border-box-sizing.rendered_html code{
+  color: #e6d818fd !important;
+  background: #181717fb !important;
+  font-style: italic;
+  //font-family: 'Buda', cursive;
+}
+
